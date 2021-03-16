@@ -76,14 +76,7 @@ if part1 != "" and part2 != "":
     img = cv2.imread('testtest.png')
 
     cropped = img[130:145, 175:235]
-    #cv2.imshow("cropped", cropped)
-    #cv2.waitKey(0)
-
-    #kernel_sharpening = np.array([[-1,-1,-1],[-1, 9,-1],[-1,-1,-1]])
-    #sharpened = cv2.filter2D(cropped, -1, kernel_sharpening)
-
-    #cv2.imshow("Sharpened", sharpened)
-    #cv2.waitKey(0)
+   
 
 
     gray = cv2.cvtColor(cropped, cv2.COLOR_BGR2GRAY)
@@ -100,9 +93,9 @@ if part1 != "" and part2 != "":
     cv2.imshow("Output", gray)
     cv2.waitKey(0)
 
-    #pytesseract.pytesseract.tesseract_cmd = '/usr/bin/tesseract'
-    #print(pytesseract.image_to_string(r'/home/iotvm/Desktop/CTF/nahacon/testtest.jpg'))
-    #result = str(pytesseract.image_to_string(img, config='--psm 13 --oem 3 '))  
-    #print(result)
+    pytesseract.pytesseract.tesseract_cmd = '/usr/bin/tesseract'
+    print(pytesseract.image_to_string(r'/home/iotvm/Desktop/CTF/nahacon/testtest.jpg'))
+    result = str(pytesseract.image_to_string(img, config='--psm 13 --oem 3 '))  
+    print(result)
 else:
     print("Time out!!")
