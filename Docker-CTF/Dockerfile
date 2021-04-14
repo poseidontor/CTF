@@ -1,3 +1,13 @@
+# docker build -t ctf:latest .
+# If using Windows
+      # docker run --rm -v %cd%:/pwd --cap-add=SYS_PTRACE --security-opt seccomp=unconfined -d --name ctf -i ctf:latest
+# If using Linux    
+      # docker run --rm -v $PWD:/pwd --cap-add=SYS_PTRACE --security-opt seccomp=unconfined -d --name ctf -i ctf:latest
+# docker exec -it ctf /bin/bash
+
+
+
+
 FROM ubuntu:latest
 ENV LC_CTYPE C.UTF-8
 ENV DEBIAN_FRONTEND=interactive
