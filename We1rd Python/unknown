@@ -1,0 +1,105 @@
+  1           0 LOAD_CONST               0 (<code object gen at 0x7f1e8f527710, file "<dis>", line 1>)
+              2 LOAD_CONST               1 ('gen')
+              4 MAKE_FUNCTION            0
+              6 STORE_NAME               0 (gen)
+
+  4           8 LOAD_CONST               2 (<code object gen2 at 0x7f1e8f5277c0, file "<dis>", line 4>)
+             10 LOAD_CONST               3 ('gen2')
+             12 MAKE_FUNCTION            0
+             14 STORE_NAME               1 (gen2)
+
+  7          16 LOAD_NAME                2 (open)
+             18 LOAD_CONST               4 ('flag.txt')
+             20 LOAD_CONST               5 ('r')
+             22 CALL_FUNCTION            2
+             24 STORE_NAME               3 (f)
+
+  8          26 BUILD_LIST               0
+             28 STORE_NAME               4 (o)
+
+  9          30 LOAD_NAME                3 (f)
+             32 LOAD_METHOD              5 (readlines)
+             34 CALL_METHOD              0
+             36 LOAD_CONST               6 (0)
+             38 BINARY_SUBSCR
+             40 STORE_NAME               6 (r)
+
+ 10          42 LOAD_NAME                7 (range)
+             44 LOAD_NAME                8 (len)
+             46 LOAD_NAME                6 (r)
+             48 CALL_FUNCTION            1
+             50 CALL_FUNCTION            1
+             52 GET_ITER
+        >>   54 FOR_ITER                22 (to 78)
+             56 STORE_NAME               9 (i)
+
+ 12          58 LOAD_NAME                4 (o)
+             60 LOAD_METHOD             10 (append)
+             62 LOAD_NAME               11 (ord)
+             64 LOAD_NAME                6 (r)
+             66 LOAD_NAME                9 (i)
+             68 BINARY_SUBSCR
+             70 CALL_FUNCTION            1
+             72 CALL_METHOD              1
+             74 POP_TOP
+             76 JUMP_ABSOLUTE           54
+
+ 14     >>   78 BUILD_LIST               0
+             80 STORE_NAME              12 (s)
+
+ 15          82 LOAD_NAME                7 (range)
+             84 LOAD_NAME                8 (len)
+             86 LOAD_NAME                4 (o)
+             88 CALL_FUNCTION            1
+             90 CALL_FUNCTION            1
+             92 GET_ITER
+        >>   94 FOR_ITER                40 (to 136)
+             96 STORE_NAME               9 (i)
+
+ 16          98 LOAD_NAME                0 (gen)
+            100 LOAD_NAME                9 (i)
+            102 CALL_FUNCTION            1
+            104 STORE_NAME              13 (t)
+
+ 17         106 LOAD_NAME                1 (gen2)
+            108 LOAD_NAME               13 (t)
+            110 CALL_FUNCTION            1
+            112 STORE_NAME               3 (f)
+
+ 18         114 LOAD_NAME               12 (s)
+            116 LOAD_METHOD             10 (append)
+            118 LOAD_NAME                3 (f)
+            120 LOAD_NAME                4 (o)
+            122 LOAD_NAME                9 (i)
+            124 BINARY_SUBSCR
+            126 BINARY_MULTIPLY
+            128 UNARY_INVERT
+            130 CALL_METHOD              1
+            132 POP_TOP
+            134 JUMP_ABSOLUTE           94
+
+ 20     >>  136 LOAD_NAME               14 (print)
+            138 LOAD_NAME               12 (s)
+            140 CALL_FUNCTION            1
+            142 POP_TOP
+
+ 21         144 LOAD_NAME               14 (print)
+            146 LOAD_NAME                8 (len)
+            148 LOAD_NAME               12 (s)
+            150 CALL_FUNCTION            1
+            152 CALL_FUNCTION            1
+            154 POP_TOP
+            156 LOAD_CONST               7 (None)
+            158 RETURN_VALUE
+
+Disassembly of <code object gen at 0x7f1e8f527710, file "<dis>", line 1>:
+  2           0 LOAD_FAST                0 (i)
+              2 LOAD_CONST               1 (11)
+              4 BINARY_XOR
+              6 RETURN_VALUE
+
+Disassembly of <code object gen2 at 0x7f1e8f5277c0, file "<dis>", line 4>:
+  5           0 LOAD_CONST               1 (14)
+              2 LOAD_FAST                0 (i)
+              4 BINARY_POWER
+              6 RETURN_VALUE

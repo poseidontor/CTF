@@ -1,0 +1,6 @@
+  1           0 LOAD_NAME                0 (print)
+              2 LOAD_CONST               0 ('lol')
+              4 CALL_FUNCTION            1
+              6 POP_TOP
+              8 LOAD_CONST               1 (None)
+             10 RETURN_VALUE
